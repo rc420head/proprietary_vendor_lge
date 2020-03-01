@@ -806,10 +806,6 @@ PRODUCT_COPY_FILES += \
     vendor/lge/msm8996-common/proprietary/vendor/lib64/hw/sound_trigger.primary.msm8996.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/sound_trigger.primary.msm8996.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.qti.voiceprint@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.voiceprint@1.0.so \
 
-# wlan - from V30B
-PRODUCT_COPY_FILES += \
-    vendor/lge/msm8996-common/proprietary/vendor/bin/wififtmd:$(TARGET_COPY_OUT_VENDOR)/bin/wififtmd \
-
 PRODUCT_PACKAGES += \
     gatekeeper.msm8996 \
 	HotwordEnrollmentOKGoogleWCD9335 \
