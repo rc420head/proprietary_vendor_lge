@@ -19,111 +19,6 @@ LOCAL_PATH := $(call my-dir)
 
 ifneq ($(filter g5 h830 h850 rs988 v20 h910 h915 h918 h990 vs995 us996 ls997 g6 h870 h872 us997 h870ds,$(TARGET_DEVICE)),)
 
-include $(CLEAR_VARS)
-LOCAL_MODULE := VZWAPNLib
-LOCAL_MODULE_OWNER := lge
-LOCAL_SRC_FILES := proprietary/app/VZWAPNLib/VZWAPNLib.apk
-LOCAL_CERTIFICATE := PRESIGNED
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_CLASS := APPS
-LOCAL_DEX_PREOPT := false
-LOCAL_MODULE_SUFFIX := .apk
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE := vzw_msdc_api
-LOCAL_MODULE_OWNER := lge
-LOCAL_SRC_FILES := proprietary/app/vzw_msdc_api/vzw_msdc_api.apk
-LOCAL_CERTIFICATE := PRESIGNED
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_CLASS := APPS
-LOCAL_DEX_PREOPT := false
-LOCAL_MODULE_SUFFIX := .apk
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE := SprintDM
-LOCAL_MODULE_OWNER := lge
-LOCAL_SRC_FILES := proprietary/priv-app/SprintDM/SprintDM.apk
-LOCAL_CERTIFICATE := platform
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_CLASS := APPS
-LOCAL_DEX_PREOPT := false
-LOCAL_MODULE_SUFFIX := .apk
-LOCAL_PRIVILEGED_MODULE := true
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE := SprintHM
-LOCAL_MODULE_OWNER := lge
-LOCAL_SRC_FILES := proprietary/priv-app/SprintHM/SprintHM.apk
-LOCAL_CERTIFICATE := platform
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_CLASS := APPS
-LOCAL_DEX_PREOPT := false
-LOCAL_MODULE_SUFFIX := .apk
-LOCAL_PRIVILEGED_MODULE := true
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE := VZWAPNService
-LOCAL_MODULE_OWNER := lge
-LOCAL_SRC_FILES := proprietary/priv-app/VZWAPNService/VZWAPNService.apk
-LOCAL_CERTIFICATE := PRESIGNED
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_CLASS := APPS
-LOCAL_DEX_PREOPT := false
-LOCAL_MODULE_SUFFIX := .apk
-LOCAL_PRIVILEGED_MODULE := true
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE := VZWAVS
-LOCAL_MODULE_OWNER := lge
-LOCAL_SRC_FILES := proprietary/priv-app/VZWAVS/VZWAVS.apk
-LOCAL_CERTIFICATE := PRESIGNED
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_CLASS := APPS
-LOCAL_DEX_PREOPT := false
-LOCAL_MODULE_SUFFIX := .apk
-LOCAL_PRIVILEGED_MODULE := true
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE := VzwLcSilent
-LOCAL_MODULE_OWNER := lge
-LOCAL_SRC_FILES := proprietary/priv-app/VzwLcSilent/VzwLcSilent.apk
-LOCAL_CERTIFICATE := PRESIGNED
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_CLASS := APPS
-LOCAL_DEX_PREOPT := false
-LOCAL_MODULE_SUFFIX := .apk
-LOCAL_PRIVILEGED_MODULE := true
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE := VzwOmaTrigger
-LOCAL_MODULE_OWNER := lge
-LOCAL_SRC_FILES := proprietary/priv-app/VzwOmaTrigger/VzwOmaTrigger.apk
-LOCAL_CERTIFICATE := PRESIGNED
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_CLASS := APPS
-LOCAL_DEX_PREOPT := false
-LOCAL_MODULE_SUFFIX := .apk
-LOCAL_PRIVILEGED_MODULE := true
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE := VerizonUnifiedSettings
-LOCAL_MODULE_OWNER := lge
-LOCAL_SRC_FILES := proprietary/framework/VerizonUnifiedSettings.jar
-LOCAL_CERTIFICATE := PRESIGNED
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_CLASS := JAVA_LIBRARIES
-LOCAL_MODULE_SUFFIX := .jar
-include $(BUILD_PREBUILT)
-
-
 ifeq ($(QCPATH),)
 include $(CLEAR_VARS)
 LOCAL_MODULE := gatekeeper.msm8996
@@ -156,54 +51,6 @@ LOCAL_MODULE := libaudio_log_utils
 LOCAL_MODULE_OWNER := lge
 LOCAL_SRC_FILES_64 := proprietary/vendor/lib64/libaudio_log_utils.so
 LOCAL_SRC_FILES_32 := proprietary/vendor/lib/libaudio_log_utils.so
-LOCAL_MULTILIB := both
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_CLASS := SHARED_LIBRARIES
-LOCAL_MODULE_SUFFIX := .so
-LOCAL_PROPRIETARY_MODULE := true
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE := libdsi_netctrl
-LOCAL_MODULE_OWNER := lge
-LOCAL_SRC_FILES_64 := proprietary/vendor/lib64/libdsi_netctrl.so
-LOCAL_SRC_FILES_32 := proprietary/vendor/lib/libdsi_netctrl.so
-LOCAL_MULTILIB := both
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_CLASS := SHARED_LIBRARIES
-LOCAL_MODULE_SUFFIX := .so
-LOCAL_PROPRIETARY_MODULE := true
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE := libqmi_cci
-LOCAL_MODULE_OWNER := lge
-LOCAL_SRC_FILES_64 := proprietary/vendor/lib64/libqmi_cci.so
-LOCAL_SRC_FILES_32 := proprietary/vendor/lib/libqmi_cci.so
-LOCAL_MULTILIB := both
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_CLASS := SHARED_LIBRARIES
-LOCAL_MODULE_SUFFIX := .so
-LOCAL_PROPRIETARY_MODULE := true
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE := libqmi_common_so
-LOCAL_MODULE_OWNER := lge
-LOCAL_SRC_FILES_64 := proprietary/vendor/lib64/libqmi_common_so.so
-LOCAL_SRC_FILES_32 := proprietary/vendor/lib/libqmi_common_so.so
-LOCAL_MULTILIB := both
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_CLASS := SHARED_LIBRARIES
-LOCAL_MODULE_SUFFIX := .so
-LOCAL_PROPRIETARY_MODULE := true
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE := libqmiservices
-LOCAL_MODULE_OWNER := lge
-LOCAL_SRC_FILES_64 := proprietary/vendor/lib64/libqmiservices.so
-LOCAL_SRC_FILES_32 := proprietary/vendor/lib/libqmiservices.so
 LOCAL_MULTILIB := both
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_CLASS := SHARED_LIBRARIES
@@ -259,41 +106,6 @@ LOCAL_PROPRIETARY_MODULE := true
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE := QtiTelephonyService
-LOCAL_MODULE_OWNER := lge
-LOCAL_SRC_FILES := proprietary/app/QtiTelephonyService/QtiTelephonyService.apk
-LOCAL_CERTIFICATE := platform
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_CLASS := APPS
-LOCAL_DEX_PREOPT := false
-LOCAL_MODULE_SUFFIX := .apk
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE := qcrilmsgtunnel
-LOCAL_MODULE_OWNER := lge
-LOCAL_SRC_FILES := proprietary/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
-LOCAL_CERTIFICATE := platform
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_CLASS := APPS
-LOCAL_DEX_PREOPT := false
-LOCAL_MODULE_SUFFIX := .apk
-LOCAL_PRIVILEGED_MODULE := true
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE := ims
-LOCAL_MODULE_OWNER := lge
-LOCAL_SRC_FILES := proprietary/priv-app/ims/ims.apk
-LOCAL_CERTIFICATE := platform
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_CLASS := APPS
-LOCAL_DEX_PREOPT := false
-LOCAL_MODULE_SUFFIX := .apk
-LOCAL_PRIVILEGED_MODULE := true
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
 LOCAL_MODULE := TimeService
 LOCAL_MODULE_OWNER := lge
 LOCAL_SRC_FILES := proprietary/vendor/app/TimeService/TimeService.apk
@@ -303,36 +115,6 @@ LOCAL_MODULE_CLASS := APPS
 LOCAL_DEX_PREOPT := false
 LOCAL_MODULE_SUFFIX := .apk
 LOCAL_PROPRIETARY_MODULE := true
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE := QtiTelephonyServicelibrary
-LOCAL_MODULE_OWNER := lge
-LOCAL_SRC_FILES := proprietary/framework/QtiTelephonyServicelibrary.jar
-LOCAL_CERTIFICATE := platform
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_CLASS := JAVA_LIBRARIES
-LOCAL_MODULE_SUFFIX := .jar
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE := qcrilhook
-LOCAL_MODULE_OWNER := lge
-LOCAL_SRC_FILES := proprietary/framework/qcrilhook.jar
-LOCAL_CERTIFICATE := platform
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_CLASS := JAVA_LIBRARIES
-LOCAL_MODULE_SUFFIX := .jar
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE := qti-telephony-common
-LOCAL_MODULE_OWNER := lge
-LOCAL_SRC_FILES := proprietary/framework/qti-telephony-common.jar
-LOCAL_CERTIFICATE := platform
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_CLASS := JAVA_LIBRARIES
-LOCAL_MODULE_SUFFIX := .jar
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)

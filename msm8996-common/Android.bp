@@ -91,3 +91,45 @@ android_app_import {
 	},
 	privileged: true,
 }
+
+android_app_import {
+	name: "uceShimService",
+	owner: "lge",
+	apk: "proprietary/app/uceShimService/uceShimService.apk",
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+}
+
+android_app_import {
+	name: "ims",
+	owner: "lge",
+	apk: "proprietary/priv-app/ims/ims.apk",
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+	privileged: true,
+}
+
+android_app_import {
+	name: "qcrilmsgtunnel",
+	owner: "lge",
+	apk: "proprietary/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk",
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+	privileged: true,
+}
+
+android_app_import {
+	name: "QtiTelephonyService",
+	owner: "lge",
+	apk: "proprietary/app/QtiTelephonyService/QtiTelephonyService.apk",
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+}
